@@ -11,7 +11,7 @@ const AdminLayout = () => {
           <NavItems />
         </SidebarComponent>
       </aside>
-      <aside>
+      <aside className="children">
         <Outlet />
       </aside>
     </div>
