@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09148cf9-2c1a-497d-b90a-dc196baffc19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/appwrite/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/appwrite/client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components /Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components /StatsCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components /TripCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/root/sign-in.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/appwrite/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/appwrite/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/appwrite/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/appwrite/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/admin/admin-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/admin-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/admin/all-users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/all-users.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/admin/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components /index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components /index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components /NavItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components /NavItems.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745869285276</updated>
-      <workItem from="1745869286566" duration="48112000" />
+      <workItem from="1745869286566" duration="56190000" />
     </task>
     <servers />
   </component>
@@ -104,18 +99,6 @@
           <line>190</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/routes/admin/dashboard.tsx</url>
-          <line>10</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/appwrite/client.ts</url>
-          <line>2</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/appwrite/auth.ts</url>
