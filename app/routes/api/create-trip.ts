@@ -1,6 +1,8 @@
-import type { ActionFunctionArgs } from "react-router";
+import { type ActionFunctionArgs, data } from "react-router";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import {parseMarkdownToJson} from "../../../lib/util";
+import { parseMarkdownToJson } from "../../../lib/util";
+import { appwriteConfig, database } from "~/appwrite/client";
+import { ID } from "appwrite";
 
 export const action = async ({ request }: ActionFunctionArgs) => {
   const {
@@ -14,7 +16,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   } = await request.json();
 
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-  const unsplashApiKey = process.env.UNSPASS_API_KEY!;
+  const unsplashApiKey = process.env.UNSPLASH_ACCESS_KEY!;
 
   try {
     const prompt = `Generate a ${numberOfDays}-day travel itinerary for ${country} based on the following user information:
@@ -70,6 +72,26 @@ export const action = async ({ request }: ActionFunctionArgs) => {
       .generateContent([prompt]);
 
     const trip = parseMarkdownToJson(textResult.response.text());
+    const imageResponse = await fetch(
+      `https://api.unsplash.com/search/photos?query=${country} ${interests} ${travelStyle}&client_id=${unsplashApiKey}`
+    );
+    const imageUrls = (await imageResponse.json()).results
+      .slice(0, 3)
+      .map((result: any) => result.urls?.regular || null);
+
+    const result = await database.createDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.tripCollectionId,
+      ID.unique(),
+      {
+        tripDetail: JSON.stringify(trip),
+        createdAt: new Date().toISOString(),
+        imageUrls,
+        userId,
+      }
+    );
+
+    return data({ id: result.$id });
   } catch (e) {
     console.error("error generating travel plan: ", e);
   }
